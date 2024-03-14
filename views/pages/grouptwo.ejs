@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group One Characters</title>
+    <link rel="stylesheet" href="styles/home.css"/>
+</head>
+<body>
+    <% include("../partials/header") %>
+    <%- include("../partials/profilenavbar") %>
+
+    <div class="main-content">
+        <h1>Welcome to Group Two!</h1>
+        <p>Below you can click a character to read more about them. To go back and read about the others, simple press the back button in your browser when in a character profile, or click the home button in this window!</p>
+        <ul>
+            <% characters.forEach(character => { %>
+                <li><a href="/characters/<%= character.name %>"><%= character.name %></a></li>
+            <% }) %>
+        </ul>
+    </div>
+    <img src="/images/logo.png" alt="Studio Ghibli Logo">
+    <% include("../partials/footer") %>
+</body>
+</html>

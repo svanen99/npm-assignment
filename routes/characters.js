@@ -1,12 +1,12 @@
 import express from 'express';
 import { charactersData } from '../data/gimbli.js';
 
-const kikkiRouter = express.Router();
+const charactersRouter = express.Router();
 
-kikkiRouter.get('/:character', (req, res) => {
+charactersRouter.get('/:character', (req, res) => {
     const characterName = req.params.character;
 
-    console.log("Reached the kikki route handler");
+    console.log("Reached the characters route handler");
     console.log("Character Name:", characterName);
 
     if (!characterName) {
@@ -17,12 +17,12 @@ kikkiRouter.get('/:character', (req, res) => {
 
     if (selectedCharacter) {
         res.render(
-            'pages/kikki.ejs',
+            'pages/characters.ejs',
             {
                 pageTitle: selectedCharacter.name,
                 subTitle: "Here's some more info about this character",
-                className: "kikki",
-                character: selectedCharacter,
+                className: "character",
+                character: selectedCharacter
             }
         );
     } else {
@@ -30,4 +30,4 @@ kikkiRouter.get('/:character', (req, res) => {
     }
 });
 
-export { kikkiRouter };
+export { charactersRouter };

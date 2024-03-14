@@ -32,7 +32,6 @@ a {
      display: flex;
      justify-content: space-around;
      list-style: none;
-     margin: 0;
      text-decoration: none;
      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
      
@@ -59,4 +58,14 @@ img {
      display: flex;
      padding-left: 50%;
      padding-top: 3%;
+}
+
+button {
+     display: flex;
+     margin: auto;
+     padding: 12px;
+     color: #A53860;
+     background-color: #BFD7B5;
+     font-weight: 12px;
+     cursor: pointer;
 }
