@@ -1,8 +1,6 @@
 html {
-    display: flex;
     background-color:#E7EFC5;
     min-height: 100vh;
-    display: flex;
 }
 
 
@@ -15,9 +13,11 @@ h1 {
 
 
 img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 12px;
     max-width: 100%;
-    display: flex;
     margin: auto;
     
 }

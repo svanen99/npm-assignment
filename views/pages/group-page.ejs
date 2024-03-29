@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head") %>
+<body>
+    <%- include("../partials/profilenavbar") %>
+
+    <div class="main-content">
+        <h1><%= pageTitle %></h1>
+        <p> Click to see character</p>
+        <ul>
+            <% characters.forEach(character => { %>
+                <li><a href="<%= groupName %>/<%= character.name %>"><%= character.name %></a></li>
+            <% }) %>
+        </ul>
+    </div>
+    <img src="/images/logo.png" alt="Studio Ghibli Logo">
+    <%- include("../partials/footer") %>
+</body>
+</html>
